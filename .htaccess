@@ -1,0 +1,14 @@
+# Запасной вариант: если корень сайта указывает на папку проекта,
+# а не на public/. Правильнее сменить document root на public.
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{REQUEST_URI} !^/public/
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+
+<FilesMatch "\.(sqlite|sql|md|log)$">
+    Require all denied
+</FilesMatch>
+
+Options -Indexes

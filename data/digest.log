@@ -1,0 +1,30 @@
+[2026-09-16 02:02:29] max: SSL certificate problem: unable to get local issuer certificate (5)
+[2026-09-16 02:11:00] max: SSL certificate problem: unable to get local issuer certificate (5)
+[2026-09-16 02:12:14] max: SSL certificate problem: unable to get local issuer certificate (5)
+[2026-09-16 02:12:38] max: SSL certificate problem: unable to get local issuer certificate (5)
+[2026-09-16 17:08:55] max: SSL certificate problem: unable to get local issuer certificate (5)
+[2026-09-16 19:17:51] max: SSL certificate problem: unable to get local issuer certificate (5)
+[2026-09-17 00:23:38] max: SSL certificate problem: unable to get local issuer certificate — не хватает корневого сертификата Минцифры. Положите его в data/ca-bundle.pem или установите в систему (update-ca-certificates). (5)
+[2026-09-17 23:48:25] email: поставлено в очередь писем — 1, находок — 4
+[2026-09-18 10:43:42] email: поставлено в очередь писем — 2, находок — 2
+[2026-09-18 19:00:01] max: SSL certificate problem: unable to get local issuer certificate — не хватает корневого сертификата Минцифры. Положите его в data/ca-bundle.pem или установите в систему (update-ca-certificates). (6)
+[2026-09-19 19:00:07] max: SSL certificate problem: unable to get local issuer certificate — не хватает корневого сертификата Минцифры. Положите его в data/ca-bundle.pem или установите в систему (update-ca-certificates). (6)
+[2026-09-19 19:00:07] email: поставлено в очередь писем — 2, находок — 4
+[2026-09-20 19:00:01] email: поставлено в очередь писем — 2, находок — 4
+[2026-09-21 19:00:01] email: поставлено в очередь писем — 2, находок — 6
+[2026-09-23 19:00:01] email: поставлено в очередь писем — 2, находок — 2
+[2026-09-24 19:00:01] email: поставлено в очередь писем — 2, находок — 5
+[2026-09-25 19:00:01] email: поставлено в очередь писем — 2, находок — 3
+[2026-09-26 19:00:01] email: поставлено в очередь писем — 2, находок — 2
+[2026-09-27 19:00:01] email: поставлено в очередь писем — 2, находок — 4
+[2026-09-28 19:00:01] email: поставлено в очередь писем — 2, находок — 4
+[2026-09-29 19:00:01] email: поставлено в очередь писем — 2, находок — 7
+[2026-09-30 19:00:01] email: поставлено в очередь писем — 2, находок — 7
+[2026-10-01 19:00:01] email: поставлено в очередь писем — 2, находок — 7
+[2026-10-03 19:00:01] email: поставлено в очередь писем — 2, находок — 7
+[2026-10-04 19:00:02] email: поставлено в очередь писем — 2, находок — 7
+[2026-10-05 19:00:01] email: поставлено в очередь писем — 2, находок — 7
+[2026-10-06 19:00:01] email: поставлено в очередь писем — 2, находок — 7
+[2026-10-07 19:00:01] email: поставлено в очередь писем — 2, находок — 4
+[2026-10-09 19:00:01] email: поставлено в очередь писем — 2, находок — 5
+[2026-10-10 19:00:02] email: поставлено в очередь писем — 2, находок — 3

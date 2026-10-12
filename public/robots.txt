@@ -1,0 +1,44 @@
+User-agent: *
+Allow: /
+
+# служебное и личное индексировать незачем
+Disallow: /admin
+Disallow: /nastroyki
+Disallow: /zakladki
+Disallow: /uvedomleniya
+Disallow: /dobavit
+Disallow: /vhod
+Disallow: /registraciya
+Disallow: /vosstanovlenie
+Disallow: /zagruzka
+Disallow: /go/
+Disallow: /poisk
+
+# Сборщики превью для соцсетей и мессенджеров. Им нужен доступ к страницам
+# публикаций: по разметке Open Graph они собирают карточку со ссылкой.
+# Если доступ закрыт, ВКонтакте публикует пустой пост без текста и картинки.
+User-agent: vkShare
+Allow: /
+
+User-agent: OdnoklassnikiBot
+Allow: /
+
+User-agent: TelegramBot
+Allow: /
+
+User-agent: WhatsApp
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+# Параметры, которые не меняют набор публикаций: сортировка, фильтры,
+# метки рекламных кампаний. Робот сведёт такие адреса к основному.
+Clean-param: utm_source&utm_medium&utm_campaign&utm_term&utm_content&yclid&gclid&from&openstat
+Clean-param: tab&period&sort
+Clean-param: cat&shop&pmin&pmax&disc&hot&code&free&img&exp
+
+Sitemap: https://hothunt.ru/sitemap.xml

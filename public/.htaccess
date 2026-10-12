@@ -1,0 +1,43 @@
+# Все запросы к несуществующим файлам уходят в index.php
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteBase /
+
+    # Сертификат выпущен на hothunt.ru и www.hothunt.ru, поэтому обе формы
+    # рабочие. Но для поиска это два разных сайта: оставляем одну, без www,
+    # и сводим на неё всё остальное одним переходом.
+    RewriteCond %{HTTP_HOST} ^www\.(.+)$ [NC]
+    RewriteRule ^ https://%1%{REQUEST_URI} [R=301,L]
+
+    # Незашифрованные запросы уводим на HTTPS. HTTP_X_FORWARDED_PROTO нужен,
+    # если сайт стоит за прокси панели: там %{HTTPS} всегда off.
+    RewriteCond %{HTTPS} !=on
+    RewriteCond %{HTTP:X-Forwarded-Proto} !=https
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
+
+    # Готовые файлы (css, js, картинки) отдаём напрямую
+    RewriteCond %{REQUEST_FILENAME} -f [OR]
+    RewriteCond %{REQUEST_FILENAME} -d
+    RewriteRule ^ - [L]
+
+    RewriteRule ^ index.php [L]
+</IfModule>
+
+# иконки и манифест отдаём как есть, с длинным кешем
+<FilesMatch "\.(ico|png|svg|webmanifest)$">
+    <IfModule mod_headers.c>
+        Header set Cache-Control "public, max-age=604800"
+    </IfModule>
+</FilesMatch>
+
+<IfModule mod_headers.c>
+    Header set X-Content-Type-Options "nosniff"
+
+    # Браузер запоминает, что сюда ходят только по HTTPS, и больше не делает
+    # первый незашифрованный запрос. Включать после того, как сертификат
+    # заработал: откатить раньше срока нельзя — браузеры помнят заголовок.
+    Header always set Strict-Transport-Security "max-age=15552000" env=HTTPS
+</IfModule>
+
+Options -Indexes
